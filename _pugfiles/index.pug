@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+  head
+    title Jade
+    link(rel='stylesheet', href='/css/style.css')
+  body
+
+  #container_demo
+    a#toregister.hiddenanchor
+    a#tologin.hiddenanchor
+    #wrapper
+      #login.animate.form
+        form(action='mysuperscript.php', autocomplete='on')
+          h1 Log in 
+          p
+            label.uname(for='username', data-icon='u')  Your email or username
+            input#username(name='username', required='required', type='text', placeholder='myusername or mymail@mail.com')
+          p
+            label.youpasswd(for='password', data-icon='p')  Your password
+            input#password(name='password', required='required', type='password', placeholder='eg. X8df!90EO')
+          p.keeplogin
+            input#loginkeeping(type='checkbox', name='loginkeeping', value='loginkeeping')
+            label(for='loginkeeping') Keep me logged in
+          p.login.button
+            input(type='submit', value='Login')
+          p.change_link Not a member yet ?
+            a.to_register(href='#toregister') Join us
+      #register.animate.form
+        form(action='mysuperscript.php', autocomplete='on')
+          h1  Sign up
+          p
+            label.uname(for='usernamesignup', data-icon='u') Your username
+            input#usernamesignup(name='usernamesignup', required='required', type='text', placeholder='mysuperusername690')
+          p
+            label.youmail(for='emailsignup', data-icon='e')  Your email
+            input#emailsignup(name='emailsignup', required='required', type='email', placeholder='mysupermail@mail.com')
+          p
+            label.youpasswd(for='passwordsignup', data-icon='p') Your password
+            input#passwordsignup(name='passwordsignup', required='required', type='password', placeholder='eg. X8df!90EO')
+          p
+            label.youpasswd(for='passwordsignup_confirm', data-icon='p') Please confirm your password
+            input#passwordsignup_confirm(name='passwordsignup_confirm', required='required', type='password', placeholder='eg. X8df!90EO')
+          p.signin.button
+            input(type='submit', value='Sign up')
+          p.change_link
+            | Already a member ?
+            a.to_register(href='#tologin')  Go and log in
+
+    script(src='/js/function.js')
